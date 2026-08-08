@@ -1,3 +1,11 @@
+
+
+//!  ABCDE
+//!  ABCD
+//!  ABC
+//!  AB
+//!  A
+
 #include<iostream>
 using namespace std;
 
@@ -14,8 +22,3 @@ int main(){
     }
 }
 
-//!  ABCDE
-//!  ABCD
-//!  ABC
-//!  AB
-//!  A

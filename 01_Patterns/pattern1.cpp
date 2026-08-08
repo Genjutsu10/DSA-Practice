@@ -1,52 +1,20 @@
-//! Question 7
-
-// #include <iostream>
-// using namespace std;
-// int main(){
-//     int i,n=5;
-//     for(int i=0;i<n;i++){
-//         for(int j=0;j<n-i-1;j++){
-//             cout<<" ";
-//         } 
-//         for(int j =0;j<2*i-1;j++){
-//             cout<<"*";
-//         }
-//         cout<<endl;
-//     }
-//     return 0; 
-// } 
 
 
 
 
-//! Question 8
-
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     int n=5;
-//     for(int i=0;i<n;i++){
-//         for(int j=0;j<i;j++){
-//             cout<<" ";
-//         }
-//         for(int j=0;j<2*n-2*i-1;j++){
-//             cout<<"*";
-//         }
-//     cout<<endl;
-//     }
-// return 0;
-// }
 
 
 
 
-//! Question 9
+
+
+// //! Question 9
 
 // #include<iostream>
 // using namespace std;
 // int main(){
 //     int i,j,n=5;
-//
+
 //         for(int i=0;i<n;i++){
 //         for(int j=0;j<n-i-1;j++){
 //             cout<<" ";
@@ -70,7 +38,7 @@
 
 
 
-//! Question 10
+// //! Question 10
 
 // #include<iostream>
 // using namespace std;

@@ -1,6 +1,13 @@
+
+//!   E
+//!   DE
+//!   CDE
+//!   BCDE
+//!   ABCDE
+
+
 #include<iostream>
 using namespace std;
-
 int main(){
     int n,j,i;
     n=5;
@@ -25,8 +32,3 @@ int main(){
 
 
 
-//!   E
-//!   DE
-//!   CDE
-//!   BCDE
-//!   ABCDE
