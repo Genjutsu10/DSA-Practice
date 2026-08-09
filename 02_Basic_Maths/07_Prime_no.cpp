@@ -17,5 +17,5 @@ int main(){
     }else{
         cout<<"Prime Number...";
     }
-    return 0;
-}
+    return 0; 
+}  
