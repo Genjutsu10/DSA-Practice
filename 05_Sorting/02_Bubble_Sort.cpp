@@ -23,3 +23,6 @@ int main(){
 return 0;   
 }
 
+
+// bubble sort for checking goes from left to right check i and i+1...
+
