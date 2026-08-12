@@ -3,13 +3,16 @@ using namespace std;
 int main(){
 
     vector<int> arr;
-    arr = {1,5,6,8,9,8,9,5,6,4,5};
-    int n = arr.size();
+    arr = {5, 7, 3, 8, 1, 2};
+    int a, n = arr.size();
 
     for(int i = 0; i<n; i++){
-        for(int j = n-1; j>0; j--){
-            if( arr[j-1] > arr[j]){
-                swap(arr[j],arr[j-1]);
+        int z;
+        for(int j = i-1; j >= 0; j--){
+            if( arr[j+1] < arr[j]){
+                z = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j]=z;
             }
         }
     }
@@ -21,5 +24,3 @@ int main(){
 }
 
 
-// just like bubble sort only that the bubble sort goes from left to right i and i+1
-// and insert sort goes from last to first check i and i-1
