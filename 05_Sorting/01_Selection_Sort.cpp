@@ -1,3 +1,9 @@
+// In all the sorting algorithms we can use this sort() function to get ans easily....
+
+//! sort(nums.begin(),nums.end());
+//! return nums;
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
