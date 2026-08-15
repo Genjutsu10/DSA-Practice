@@ -18,8 +18,6 @@ public:
             }else if( nums[i] != 0){
                 i++;
             }
-        }
-
-        
+        }      
     }
 };

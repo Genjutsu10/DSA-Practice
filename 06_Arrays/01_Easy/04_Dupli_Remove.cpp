@@ -33,7 +33,7 @@ public:
 
         for(int j = 1; j < n; j++) { // j 1th index ko pnt karega..
 
-            if(arr[i] != arr[j]) { // i 0th index pe he rahega unless koi usko diff banda na mil jaye with help of j jab tk koi naya nhi milta j badhta jayega..
+            if(arr[i] != arr[j]) { // i 0th index pe he rahega unless koi usko diff banda na mil jaye with help of j. jab tk koi naya nhi milta j badhta jayega..
                 i++;               // banda milte he i++ hoke us bande ko us i++ location pe leke store kr lega...
                 arr[i] = arr[j];
             }
