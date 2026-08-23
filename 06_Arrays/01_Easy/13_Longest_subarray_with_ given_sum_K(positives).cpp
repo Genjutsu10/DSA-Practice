@@ -45,8 +45,8 @@ public:
                 maxlen = i + 1;
             }
 
-            if (mp.find(sum - k) != mp.end()) {
-                maxlen = max(maxlen, i - mp[sum - k]);
+            if (mp.find(sum - k) != mp.end()) {      // agar tu map mai hoga to last eterater ko map nhi krega,
+                maxlen = max(maxlen, i - mp[sum - k]); // means ki != means ki check is it in the map.. 
             }
 
             if (mp.find(sum) == mp.end()) {
