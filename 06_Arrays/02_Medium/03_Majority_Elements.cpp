@@ -67,6 +67,8 @@ public:
 
 
 /*
+
+
 This idea of candidate - count is crazy...
 
 pehle kya huua count 0 tha tb arr[i] ko candidate bna diya phir jb jb wo bnada repeat hoga,,
@@ -79,8 +81,6 @@ q. mai diyahai ki majority matlab half of the array se bhi jyada count...
 ? assume that the majority element always exists in the array. 
 agar exterem case bhi aa gyi to bhi wahi candidate hoga uper ki condition..
 means ki agar {1,1,1,2,2,2,1} aaya to bhi count 1 nhi ho payega...
-
-
 
 
 
