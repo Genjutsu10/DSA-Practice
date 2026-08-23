@@ -36,20 +36,19 @@ public:
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        int i = 0;
 
         map<int,int>mp; 
 
         int n = nums.size();
-        int sum = 0;
+        int number = 0;
 
         for(int i=0; i<n; i++){
-            sum = target - nums[i];
-            if( mp.find(sum) != mp.end() ){
-                return {i,mp[sum]};
+            number = target - nums[i];
+            if( mp.find(number) != mp.end() ){ 
+                return {i,mp[number]};
             }
-            mp[nums[i]]=i;   // yaha pr hashing baad mai kyu ki start mai krke cmp bhi kr sakte the.. 
-        return {};           // koyki agar arr={3}  hai 6=target aur usko kr diya map mai store.apna sum = 3, aur 3 is in the map that means ans is (1,1) nopeee..
-        }
-    }
-};
+            mp[nums[i]]=i; // yaha pr humm logo ne mp[number] kyo nhi liya ??   
+        return {};         // arr = {2,5} target=7 isme pehlr map mai 7-2 nhi tha (infact kuch bhi nhi tha..) fir map me jayega 5 (3 jana chahiye tha.. magar arr[number])         
+        }                  // fir 5 ki bazri aayi 7-5 map main nhi haiii yahi problrm hai ki vo hona chahiy tha map maii kyoki arr galat ngi hai method galat hai is liye use kro mp[arr[i]]
+    }                    // yaha pr hashing baad mai kyu ki start mai krke cmp bhi kr sakte the.. 
+};                       // koyki agar arr={3}  hai 6=target aur usko kr diya map mai store.apna sum = 3, aur 3 is in the map that means ans is (1,1) nopeee..
