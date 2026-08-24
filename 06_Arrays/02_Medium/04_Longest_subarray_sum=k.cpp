@@ -61,15 +61,17 @@ public:
         int maxima = nums[0];
 
         for(int i = 0; i < n; i++){
+            
             sum = sum + nums[i];
 
-            maxima = max( maxima , sum);
+            if( sum > maxima ){
+                maxima = sum;
+            }
 
             if( sum < 0){
                 sum = 0;
             }
         }
-
         return maxima;
     }
 };
