@@ -40,3 +40,28 @@ public:
 //! =========================================== OPTIMAL CODE... ===========================================
 
 
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+
+        int n = nums.size();
+
+        int plus = 0;
+
+        int minus = 1;
+
+        vector<int> res(n);
+
+        for( int i = 0 ; i < n ; i++ ){
+            if( nums[i] >= 0){
+                res[plus] = nums[i];
+                plus=plus+2;
+            }else{
+                res[minus] = nums[i];
+                minus = minus + 2;
+            }
+        }
+        return res;
+
+    }
+};
