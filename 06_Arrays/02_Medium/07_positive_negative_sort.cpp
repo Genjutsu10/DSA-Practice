@@ -23,7 +23,7 @@ public:
             }else{
                 res2.push_back(nums[i]);
             }
-        }
+        } 
 
         int x = res1.size();
 
