@@ -53,13 +53,16 @@ public:
         vector<int> res(n);
 
         for( int i = 0 ; i < n ; i++ ){
+
             if( nums[i] >= 0){
                 res[plus] = nums[i];
                 plus=plus+2;
-            }else{
+            }
+            else{
                 res[minus] = nums[i];
                 minus = minus + 2;
             }
+            
         }
         return res;
 
