@@ -1,0 +1,9 @@
+//! In questions of SUBARRAY..
+
+// if( mp.begin() != mp.end() )
+//! ke baad ki else wali wo mp[sum]=something  will always in the else except for the question where they asked for the count...
+
+// to koi element like 2,1 pehle append kiya haii badme 2,2 append kr diya..
+// so kya hoga 2,2 bn jayega phir jo max lenght hogi vo km hogi...
+// so questions like the //! Max subarray lenght or evertime always put this is in the else 
+// unless they asked for //! count....
