@@ -79,6 +79,40 @@ public:
 
 
 
+//! =========================================== Better Solution.... ===========================================  
+
+
+
+class Solution {
+  public:
+    vector<int> findTwoElement(vector<int>& arr) {
+
+        vector<int> v;
+
+        unordered_map<int,int> Num_Freq;
+
+        for(int i=0;i<arr.size();i++){
+            Num_Freq[arr[i]]+=1;
+        }
+
+        for(auto i:Num_Freq){
+            if(i.second==2){
+                v.push_back(i.first);
+                break;
+            }
+        }
+
+        for(int i=0;i<arr.size();i++){
+            if(Num_Freq.find(i+1)==Num_Freq.end()){
+                v.push_back(i+1);
+                break;
+            }
+        }
+
+        return v;
+    }
+};
+
 //! =========================================== OPTIMAL Condition..... ===========================================  
 // 2 eqution bano x+y nd x-y....
 
@@ -116,3 +150,6 @@ public:
         return {(int)rep, (int)miss};
     }
 };
+
+
+

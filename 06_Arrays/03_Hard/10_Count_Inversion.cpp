@@ -2,7 +2,21 @@
 
 
 //! =========================================== Brute Force.... ===========================================  
+/*
 
+Inversion count: the array does not necessarily have to contain only positive numbers. The condition is simply arr[i] > arr[j], so negatives are fine too.
+Reverse Pairs: the condition is arr[i] > 2 * arr[j], and because arr[j] can be negative, arr[i] > arr[j] does not guarantee arr[i] > 2 * arr[j].
+
+Example:
+
+left = -5
+right = -3
+
+left > right?
+-5 > -3  ❌
+
+
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
