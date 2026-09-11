@@ -34,9 +34,9 @@ void sortmerge(vector<int> &arr, int low, int mid, int high){
         right++;
     }
 
-    // If elements are still left on the left half.....
-    for (int i = low; i <= high; i++) {
-        arr[i] = news[i - low];
+    for (int i = low; i <= high; i++) {  // arr  = [3, 1, 2, 4]
+                                         // news = [1, 3]
+        arr[i] = news[i - low];          // arr = [1, 3, 2, 4] is liie sirf the low to high ke elements ko upadate karenge...
     }
 
 
@@ -45,7 +45,7 @@ void sortmerge(vector<int> &arr, int low, int mid, int high){
 }
 
 
-void ms( vector<int> &arr , int low , int high ){
+void ms( vector<int> &arr , int low , int high ){  // ye function behen ka loda haii.. sb yahi krta haiii...
 
     if ( low >= high ){
             return ;
@@ -55,7 +55,8 @@ void ms( vector<int> &arr , int low , int high ){
     ms(arr , mid+1 , high );   //2)  CODE for right side of arrays and it goes call it again and again until every array becomes the single array.....
 
     sortmerge(arr,low,mid,high); // CODE for sorting the 1) and 2) and after that sorting and merging 1 & 2.... 
-}
+}                                // same algo like sorting the 2 sorted arrays...
+
 
 int main() {
     vector<int> arr = {3, 1, 2, 4, 1, 5, 2, 6, 4};
@@ -129,3 +130,4 @@ int main() {
 
 //     return 0;
 // }
+
