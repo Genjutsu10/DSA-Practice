@@ -43,5 +43,49 @@ class Solution {
 
 
 
+//! =========================================== RECURSIVE FUNCTION.... ===========================================  
+
+
+class Solution {
+  public:
+    
+    void help(stack<int> &st , int value ) {
+        
+        if( st.empty() == 1 || value > st.top() ){
+            st.push( value );
+            return ;
+        }
+        
+        int insert = st.top();
+        
+        st.pop();
+        
+        help( st , value );
+        
+        st.push( insert );
+        
+    }
+  
+  
+  
+  
+    void sortStack(stack<int> &st) {
+        
+        
+        int n = st.size();
+        
+        if( st.empty() == 1 ){
+            return ;
+        }
+        
+        int value = st.top();
+        st.pop();
+        
+        sortStack( st );
+        
+        help ( st , value );
+    }
+};
+
 
 
