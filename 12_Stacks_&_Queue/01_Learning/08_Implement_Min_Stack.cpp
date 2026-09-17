@@ -43,3 +43,38 @@ public:
 
 //! =========================================== OPTIMAL CODE... ===========================================
 
+class MinStack {
+public:
+    stack<int> st;
+    stack<int> temp;
+
+    MinStack() {
+    }
+
+    void push(int value) {
+        if( st.size() == 0 ){
+            st.push(value);
+            temp.push(value);
+        }else{
+            st.push(value);
+            if( st.top() <= temp.top() ){
+                temp.push(st.top());
+            }
+        }
+    }
+
+    void pop() {
+        if( st.top() == temp.top() ){
+            temp.pop();
+        }
+        st.pop(); 
+    }
+
+    int top() {
+        return st.top(); 
+    }
+
+    int getMin() {
+        return temp.top();
+    }
+};
