@@ -128,18 +128,16 @@ public:
         for( int i = 0 ; i < n ; i++ ){
 
             int max = INT_MAX;
-            int sum = INT_MAX-1;
 
             for ( int j = 0; j < m ; j++ ){
                 if( nums1[i] == nums2[j] ){
                     max = nums2[j];
-                    sum = nums2[j];
                 }
                 if( max < nums2[j] ){
                     max = nums2[j];
                     break;
                 }
-                if( j == m-1 && max == sum ){
+                if( j == m-1 ){
                     max = -1;
                 }
             }
