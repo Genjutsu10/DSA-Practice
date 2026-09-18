@@ -1,3 +1,13 @@
+/*
+
+! if the a->b transformation is there so starting i depends on A..
+? check A if starting ( i = 0) he have the operator start from (i = n-1) and Visca Barca..
+
+
+*/
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
