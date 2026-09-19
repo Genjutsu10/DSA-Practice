@@ -32,7 +32,66 @@ public:
     }
 };
 
-//? =========================================== OPTIMAL CODE... ===========================================
+
+//? =========================================== OPTIMAL/Better more difficult CODE... ===========================================
+
+
+
+/*
+    1. Start traversing the array from right to left,
+       because we need to find the Next Greater Element
+       on the right side.
+
+    2. Remove all elements from the stack that are
+       smaller than or equal to the current element,
+       because they cannot be its Next Greater Element.
+
+    3. If the stack is empty:
+       → NGE is -1.
+
+    4. Otherwise:
+       → stack top is the Next Greater Element.
+
+    5. Store the original current element in 'a'
+       before replacing arr[i] with its answer.
+
+    6. Push the original current element into the stack.
+
+    7. Repeat for every element from right to left.
+*/
+
+
+
+class Solution {
+public:
+    vector<int> nextLargerElement(vector<int> arr) {
+
+        int a;
+        int n = arr.size();
+        stack<int> st;
+
+        for( int i = n-1; i >= 0; i-- ){
+
+            while( !st.empty() && arr[i] >= st.top() ){
+                st.pop();
+            }           
+            a = arr[i];
+            if( st.empty() ){
+                arr[i] = -1;
+            }
+            else{
+                arr[i] = st.top();
+            }
+            st.push( a );
+            
+        }
+        return arr;
+       
+    }
+};
+
+
+//? =========================================== OPTIMAL/Better more difficult CODE... ===========================================
 
 /*
 
@@ -159,43 +218,34 @@ class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
 
-        int a;
         int n = nums2.size();
         int m = nums1.size();
+
         stack<int> st;
         unordered_map<int, int> mp;
 
         for (int i = n - 1; i >= 0; i--) {
 
-            if (i == n - 1) {
-                a = nums2[i];
+            int a = nums2[i];
+
+            while (!st.empty() && nums2[i] >= st.top()) {
+                st.pop();
+            }
+
+            if (st.empty()) {
                 mp[nums2[i]] = -1;
-                st.push(a);
-                continue;
             }
-            if (nums2[i] < st.top()) {
-                a = nums2[i];
+            else {
                 mp[nums2[i]] = st.top();
-                st.push(a);
-            }else{
-                a = nums2[i];
-                while (!st.empty() && nums2[i] >= st.top()) {
-                    st.pop();
-                }
-
-                if (st.empty()) {
-                    mp[nums2[i]] = -1;
-                }else{
-                    mp[nums2[i]] = st.top();
-                }
-
-                st.push(a);
             }
+
+            st.push(a);
         }
 
         for (int i = 0; i < m; i++) {
             nums1[i] = mp[nums1[i]];
         }
+
         return nums1;
     }
 };

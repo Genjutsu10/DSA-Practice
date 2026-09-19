@@ -43,6 +43,52 @@ public:
 //! =========================================== OPTIMAL CODE... ===========================================
 
 
+/*
 
+    We use ans because we are storing the answers
+    separately without changing the original nums.
+
+    We traverse 2*n elements because the array is circular.
+
+    5 → 7 → 1 → 2 → 5 → 7 → 1 → 2
+
+    nums → original elements
+    ans  → stores the answers
+    
+*/
+
+
+class Solution { 
+public: 
+    vector<int> nextGreaterElements(vector<int>& nums) { 
+        
+        int n = nums.size(); 
+        vector<int> ans = nums; 
+        int a; 
+ 
+        stack<int> st; 
+ 
+        for (int i = 2 * n - 1; i >= 0; i--) { 
+ 
+            int index = i % n; 
+            a = nums[index];
+
+            while (!st.empty() && nums[index] >= st.top()) { 
+                st.pop(); 
+            } 
+ 
+            if (st.empty()) { 
+                ans[index] = -1; 
+            } 
+            else { 
+                ans[index] = st.top(); 
+            } 
+
+            st.push(a); 
+        } 
+        
+        return ans; 
+    } 
+};
 
 
