@@ -106,9 +106,10 @@ public:
             }
 
             if(alive) {
-                st.push(asteroids[i]);
-            }
-        }
+                st.push(asteroids[i]);  // in these cases we had to push the arr[i] 1. whrn stack is empty...
+            }                           // 1. when stack is empty...
+        }                               // 2. when condition is not matched -> ( st.top() > 0 && asteroids[i] < 0 )....
+                                        // 3. when sum >= 0 i.means top() is prior so arr[i] has no things to do now...
 
         vector<int> ans(st.size());
 
@@ -116,7 +117,7 @@ public:
             ans[i] = st.top();
             st.pop();
         }
-        
+
         return ans;
     }
 };
