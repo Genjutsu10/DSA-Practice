@@ -61,14 +61,6 @@ int SecondLargest(vector<int> &arr) {
     return smax;
 }
 
-int main() {
-
-    vector<int> arr = {5, 2, 8, 3, 6};
-
-    cout << SecondLargest(arr);
-
-    return 0;
-}
 
 
 
