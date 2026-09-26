@@ -1,7 +1,3 @@
-
-#include<bits/stdc++.h>
-using namespace std;
-
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -10,6 +6,12 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+//! =========================================== LITTLE BIT OPTIMAL CODE... ===========================================
+
+
+#include<bits/stdc++.h>
+using namespace std;
  
 class Solution {
 public:
@@ -36,5 +38,28 @@ public:
         bool u = true;
         help( p , q , u );
         return u;
+    }
+};
+
+//! =========================================== OPTIMAL CODE... ===========================================
+
+class Solution {
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+
+        if( p == nullptr && q == nullptr ){
+            return true;
+        }
+
+        if(p == nullptr || q == nullptr){
+            return false;
+        }
+
+        if( p->val != q->val ){
+            return false;
+        }
+        
+        return (isSameTree( p->left , q->left ) && isSameTree( p->right , q->right ) );
+
     }
 };
