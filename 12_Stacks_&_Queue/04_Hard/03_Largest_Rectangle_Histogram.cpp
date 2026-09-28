@@ -200,3 +200,60 @@ Area = Height × Width
 maxArea update karo
 
 */
+
+
+
+//? Code without the comments..
+
+// class Solution {
+// public:
+
+//     int largestRectangleArea(vector<int>& heights) {
+
+//         int n = heights.size();
+
+//         stack<int> st;
+
+//         int maxArea = 0;
+        
+//         for (int i = 0; i <= n; i++) {
+
+//             int currentHeight;
+//             if (i == n) {
+//                 currentHeight = 0;
+//             }
+//             else {
+//                 currentHeight = heights[i];
+//             }
+
+//             while (!st.empty() && heights[st.top()] > currentHeight) {
+
+//                 int elementIndex = st.top();
+
+//                 st.pop();
+//                 int pse;
+
+//                 if (st.empty()) {
+//                     pse = -1;
+//                 }
+//                 else {
+//                     pse = st.top();
+//                 }
+
+//                 int nse = i;
+
+//                 int width = nse - pse - 1;
+
+//                 int area = heights[elementIndex] * width;
+
+//                 maxArea = max(maxArea, area);
+//             }
+
+
+//             if (i < n) {
+//                 st.push(i);
+//             }
+//         }
+
+//         return maxArea;
+//     }

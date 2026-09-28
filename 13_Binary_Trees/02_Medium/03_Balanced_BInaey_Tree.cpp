@@ -28,6 +28,11 @@ public:
         int lh = help( root->left );
         int rh = help( root->right );
 
+
+        // why htese two conditions...
+        // jb  if( abs( lh - rh ) > 1 ){ return -1;} hoga to jb lh or rh is gonna became -1...
+
+
         if( lh == -1 ){
             return -1;
         }
